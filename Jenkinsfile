@@ -24,11 +24,23 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Shell') {
       steps {
         sh '''echo "hello world"
 
 pwd'''
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        input(message: 'Are you sure to deploy ?', ok: 'Yes')
+      }
+    }
+
+    stage('Notify for new build') {
+      steps {
+        echo 'New Build completed successfully'
       }
     }
 
