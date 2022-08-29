@@ -4,6 +4,10 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build completed from BlueOcean'
+        retry(count: 3) {
+          sh 'ssssssss'
+        }
+
       }
     }
 
