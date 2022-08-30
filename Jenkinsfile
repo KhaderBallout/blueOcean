@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Build completed from BlueOcean'
         retry(count: 3) {
-          sh 'ssssssss'
+          sh 'pwd'
         }
 
       }
